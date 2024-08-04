@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Image Gallery</title>
+  </head>
+  <body>
+    <div id="fullimgbox" class="full-img">
+      <img id="fullimg" src="img1.jpg" alt="" />
+      <span onclick="closeimg()">X</span>
+    </div>
+    <div class="img-gallery">
+      <img src="img1.jpg" alt="" onclick="openimg('img1.jpg')" />
+      <img src="img2.jpg" alt="" onclick="openimg('img2.jpg')" />
+      <img src="img3.jpg" alt="" onclick="openimg('img3.jpg')" />
+      <img src="img4.jpg" alt="" onclick="openimg('img4.jpg')" />
+      <img src="img5.jpg" alt="" onclick="openimg('img5.jpg')" />
+      <img src="img6.jpg" alt="" onclick="openimg('img6.jpg')" />
+      <img src="img7.jpg" alt="" onclick="openimg('img7.jpg')" />
+      <img src="img8.jpg" alt="" onclick="openimg('img8.jpg')" />
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var fullimgbox = document.getElementById("fullimgbox");
+        var fullimg = document.getElementById("fullimg");
+
+        window.openimg = function (src) {
+          fullimg.src = src;
+          fullimgbox.style.display = "flex";
+        };
+
+        window.closeimg = function () {
+          fullimgbox.style.display = "none";
+        };
+      });
+    </script>
+  </body>
+</html>
